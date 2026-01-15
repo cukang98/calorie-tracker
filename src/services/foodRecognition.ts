@@ -70,6 +70,7 @@ export async function analyzeFoodImage(imageFile: File): Promise<{
 }
 
 function extractFoodFromDetection(data: any): string | null {
+    console.log(data);
   // Simplified extraction - in production, use a food recognition model
   // For now, return a placeholder
   return 'Detected Food'

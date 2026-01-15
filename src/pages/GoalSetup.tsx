@@ -11,7 +11,6 @@ export default function GoalSetup() {
   const { user } = useAuth()
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
-  const [hasProfile, setHasProfile] = useState(false)
 
   const [formData, setFormData] = useState({
     currentWeight: '',
@@ -60,7 +59,6 @@ export default function GoalSetup() {
       .single()
 
     if (data) {
-      setHasProfile(true)
       navigate('/dashboard')
     }
   }
